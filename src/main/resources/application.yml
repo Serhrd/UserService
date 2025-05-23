@@ -1,9 +1,9 @@
 
 spring:
   config:
-    import: file:src/main/resources/a.properties
+    import: file:.env[.properties]
   datasource:
-    url: jdbc:postgresql://localhost:5432/subscription_db
+    url: ${SPRING_DATASOURCE_URL}
     username: ${POSTGRES_USER}
     password: ${POSTGRES_PASSWORD}
     driver-class-name: org.postgresql.Driver
